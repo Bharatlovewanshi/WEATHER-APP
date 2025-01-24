@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,9 +22,9 @@
         <div class="weather-container">
             <!--grant location container-->
 
-            <div class="grant-location-container">
+            <div class="sub-container grant-location-container">
                 <img src="./assets/location.png" alt="" width="80" height="80">
-                <p>grant Location Access</p>
+                <p>Grant Location Access</p>
                 <p>Allow Access to get weather Information</p>
                 <button class="btn" data-grantAccess>Grant Access</button>
             </div>
@@ -33,7 +37,7 @@
                 </button>
             </form>
             <!--loading screen container-->
-            <div class="loading-container">
+            <div class="sub-container loading-container">
                 <img src="./assets/loading - Copy.gif" width="150" height="150">
                 <p>Loading</p>
             </div>
@@ -44,7 +48,7 @@
                 <img data-countryIcon>
             </div>
 
-            <div class="user-info-container">
+            <div class="sub-container user-info-container">
 
             <!--weatherDescription-->
             <p data-weatherDesc></p>
@@ -58,21 +62,21 @@
             <!--3 cards-->
             <div class="parameter-container">
                 <!--card1-->
-                <div>
+                <div class="parameter">
                     <img src="./assets/wind.png" alt="">
                     <p>windspeed</p>
                     <p data-windspeed></p>
                 </div>
 
                 <!--card2-->
-                <div>
+                <div class="parameter">
                     <img src="./assets/humidity.png" >
                     <p>humidity</p>
                     <p data-humidity></p>
                 </div>
 
                 <!--card3-->
-                <div>
+                <div class="parameter">
                     <img src="./assets/cloud.png" >
                     <p>Clouds</p>
                     <p data-cloudiness></p>

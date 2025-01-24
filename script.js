@@ -60,9 +60,7 @@ async function fetchUserWeatherInfo(coordinates){
     loadingScreen.classList.add("active");
 
     try{
-        const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-        );
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`);
         
         const data = await response.json();
 
@@ -92,10 +90,10 @@ function renderWeatherInfo(weatherInfo){
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`; 
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo.weather?.[0]?.icon}.png`;
-    temp.innerText = weatherInfo?.main?.temp;
-    windspeed.innerText = weatherInfo?.wind?.speed;
-    humidity.innerText = weatherInfo?.main?.humidity;
-    cloudiness.innerText = weatherInfo?.clouds?.all; 
+    temp.innerText =`${weatherInfo?.main?.temp} °C`;
+    windspeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
+    humidity.innerText = `${weatherInfo?.main?.humidity} %`;
+    cloudiness.innerText = `${weatherInfo?.clouds?.all} %`; 
 }
 function getLocation(){
     if(navigator.geolocation){
@@ -148,9 +146,12 @@ async function fetchSearchWeatherInfo(city) {
     }
     catch(err){
               //hw
-
               loadingScreen.classList.remove("active");
               console.error("Error fetching weather info:", err);
               alert("City not found. Please try again.");
+
+              
+
+
     }
 }
