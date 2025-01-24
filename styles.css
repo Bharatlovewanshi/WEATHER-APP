@@ -20,7 +20,7 @@
 
 .wrapper{
     width: 100vw;
-    height: 1130px;
+    height: 100vh;
     padding-top: 10px;
     /* display: flex;
     flex-direction: column; */
@@ -34,73 +34,261 @@ h1{
     padding-top: 20px;
 }
 
-.tab-container{
-    width: 90%;
-    max-width: 550px;
-    margin: 0 auto;
-    margin-top: 4rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tab{
-    cursor: pointer;
-    font-size: 0.875rem;
-    letter-spacing: 1.75px;
-    padding: 5px 8px;
-}
-
-.tab.current-tab{
-    background-color: rgba(219, 226, 239, 0.5);
-    border-radius: 4px;
-}
 
 .weather-container{
   margin-block: 4rem;
 }
 
-.btn{
-    all: unset;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: var(--colorDark2);
-    cursor: pointer;
-    padding: 10px 30px;
-    margin-bottom: 10px;
-}
+@media screen and (min-width:336px){
 
-.sub-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .tab-container{
+        width: 90%;
+        max-width: 550px;
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.grant-location-container{
-    display: none;
-    flex-direction: column;
-}
+    .tab{
+        cursor: pointer;
+        font-size: 0.875rem;
+        letter-spacing: 1.75px;
+        padding: 5px 8px;
+    }
+    
+    .tab.current-tab{
+        background-color: rgba(219, 226, 239, 0.5);
+        border-radius: 4px;
+    }
 
-.grant-location-container.active{
-    display: flex;
-}
 
-.grant-location-container img{
-  margin-bottom: 2rem;  
+    .btn{
+        all: unset;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        border-radius: 5px;
+        background-color: var(--colorDark2);
+        cursor: pointer;
+        padding: 10px 30px;
+        margin-bottom: 10px;
+    }
+
+    .sub-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .grant-location-container{
+        display: none;
+        flex-direction: column;
+    }
+    
+    .grant-location-container.active{
+        display: flex;
+    }
+    
+    .grant-location-container img{
+      margin-bottom: 2rem;  
+    } 
+    
+    .grant-location-container p:first-of-type{
+        font-size: 1.75rem;
+        font-weight: 600;   
+    }
+    
+    .grant-location-container p:last-of-type{
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 0.75rem;
+        margin-bottom: 1.75rem;
+        letter-spacing: 0.75px;
+    }
+
+    .form-container{
+        display: none; 
+        /* display: flex; */
+        width: 90%;
+        max-width: 550px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0 10px;
+        margin-bottom: 3rem;
+    }
+    
+    .form-container.active{
+        display: flex;
+    }
+    
+    .form-container input{
+        all: unset;
+        width: 100%;
+        height: 40px;
+        padding: 0 20px;
+        background-color: rgba(219, 226, 239, 0.5);
+        border-radius: 10px;
+    }
+    
+    .form-container input::placeholder{
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .form-container input:focus{
+        outline: 3px solid rgba(255, 255, 255, 0.7);
+    }
+    
+    .form-container .btn{
+        padding: unset;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        margin-bottom: 1px;
+    }
+
 } 
 
-.grant-location-container p:first-of-type{
-    font-size: 1.75rem;
-    font-weight: 600;   
+@media screen and (max-width: 336px){
+
+    .tab-container{
+        width: 90%;
+        max-width: 550px;
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .tab{
+        cursor: pointer;
+        font-size: 0.875rem;
+        max-width: 97px;
+        letter-spacing: 1.75px;
+        text-align: center;
+        align-content: center;
+        margin-top: -8%;
+        /* padding: 5px 8px; */
+    }
+    
+    .tab.current-tab{
+        background-color: rgba(219, 226, 239, 0.5);
+        border-radius: 4px;
+        height: 40px;
+        max-width:97px;
+        margin-top: -8%;
+        text-align: center;
+        align-content: center;
+    }
+
+    .btn{
+        all: unset;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        border-radius: 5px;
+        background-color: var(--colorDark2);
+        cursor: pointer;
+        padding: 10px 30px;
+        margin-bottom: 10px; 
+    }
+
+    .sub-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .grant-location-container{
+        display: none;
+        flex-direction: column;
+    }
+    
+    .grant-location-container.active{
+        display: flex;
+    }
+    
+    .grant-location-container img{
+      margin-bottom: 2rem;  
+    } 
+    
+    .grant-location-container p:first-of-type{
+        font-size: 1.75rem;
+        max-width: 200px;
+        font-weight: 600;  
+        text-align: center; 
+    }
+    
+    .grant-location-container p:last-of-type{
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 0.75rem;
+        margin-bottom: 1.75rem;
+        letter-spacing: 0.75px;
+        max-width: 200px;
+        text-align: center; 
+    }
+
+    .form-container{
+        display: none; 
+        /* display: flex; */
+        width: 90%;
+        max-width: 550px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0 10px;
+        margin-bottom: 3rem;
+    }
+    
+    .form-container.active{
+        display: flex;
+    }
+    
+    .form-container input{
+        all: unset;
+        width: 50%;
+        height: 40px;
+        padding: 0 20px;
+        background-color: rgba(219, 226, 239, 0.5);
+        border-radius: 10px;
+    }
+    
+    .form-container input::placeholder{
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .form-container input:focus{
+        outline: 3px solid rgba(255, 255, 255, 0.7);
+    }
+    
+    .form-container .btn{
+        padding: unset;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        margin-bottom: 1px;
+    }
+
 }
 
-.grant-location-container p:last-of-type{
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-top: 0.75rem;
-    margin-bottom: 1.75rem;
-    letter-spacing: 0.75px;
+@media  screen and (max-width: 769px) {
+    .parameter-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
 }
+
 
 .loading-container{
     display: none;
@@ -165,8 +353,9 @@ h1{
 }
 
 .parameter{
-   width: 30%;
-   max-width: 200px;
+   width: 22%;
+   height: 170px;
+   min-width: 130px;
    background-color: rgba(219, 226, 239, 0.5);
    border-radius: 5px;
    padding: 1rem;
@@ -174,6 +363,7 @@ h1{
    flex-direction: column;
    gap: 5px 0; 
    align-items: center;
+   justify-content: center;
 }
 
 .parameter img{
@@ -185,48 +375,4 @@ h1{
     font-size: 1.15rem;
     font-weight: 600;
     text-transform: uppercase;
-}
-
-.form-container{
-    display: none; 
-    /* display: flex; */
-    width: 90%;
-    max-width: 550px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 0 10px;
-    margin-bottom: 3rem;
-}
-
-.form-container.active{
-    display: flex;
-}
-
-.form-container input{
-    all: unset;
-    width: calc(100%-80px);
-    height: 40px;
-    padding: 0 20px;
-    background-color: rgba(219, 226, 239, 0.5);
-    border-radius: 10px;
-}
-
-.form-container input::placeholder{
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.form-container input:focus{
-    outline: 3px solid rgba(255, 255, 255, 0.7);
-}
-
-.form-container .btn{
-    padding: unset;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    margin-bottom: 1px;
 }
